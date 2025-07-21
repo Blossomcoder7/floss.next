@@ -5,14 +5,23 @@
   --foreground: #ffffff;
   --background: #171717;
   --color-primary: #ff0000;
+  scrollbar-width: none !important;
 }
 
 body {
   background: var(--background);
+  scrollbar-width: none !important;
 }
 button {
   cursor: pointer;
 }
 
-@layer utilities {
+@keyframes slide {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slide {
+  animation: slide 20s linear infinite forwards;
 }

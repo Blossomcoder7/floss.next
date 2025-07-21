@@ -13,6 +13,8 @@ import { FaCartPlus, FaSearch, FaUser } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import AddPopperEl from "@/components/elements/AddPopperEl";
 import { useGetLandingLoadedStatus } from "@/provider/LandingContextProvider";
+import Scrollindicator from "@/components/UI/Scrollindicator";
+import footerbg from "@/assets/images/footerbg.png";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   useSmoothScroll({ autoInit: true });
@@ -22,6 +24,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
+      <Scrollindicator />
       <nav className="fixed top-13 w-full z-[99] px-4 sm:px-10 md:px-20">
         <AnimatePresence>
           <motion.div
@@ -92,7 +95,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
                                   {label}
                                 </span>
                                 <AddPopperEl
-                                  className="flex items-center justify-center gap-2 h-full "
+                                  className="flex items-center justify-center gap-4 h-full "
                                   popperContent={
                                     <>
                                       <div className="flex w-full h-screen items-center justify-center">
@@ -145,7 +148,63 @@ const Layout = ({ children }: { children: ReactNode }) => {
         </AnimatePresence>
       </nav>
       <main>{children}</main>
-      <footer></footer>
+      <footer className="grid grid-cols-1 w-full min-h-fit auto-rows-fr bg-[#FCE4DC] pb-10 px-10 md:px-14 relative">
+        {/* Background Image */}
+        <div className="absolute z-0 w-full h-full inset-0">
+          <Image
+            fill
+            className="object-cover object-top w-full h-full"
+            src={footerbg}
+            alt="footer"
+          />
+        </div>
+        <div className="w-full h-full"></div>
+        {/* Main Content */}
+        <div className="relative z-10 w-full min-h-[424px] bg-[#FFFCF3] text-[#231F20] rounded-[22px] p-10 flex flex-col justify-between gap-10">
+          {/* Top Grid: Logo + Links */}
+          <div className="flex flex-col md:flex-row w-full gap-8">
+            {/* Left Logo Section (40%) */}
+            <div className="w-full md:w-[40%] flex items-start">
+              <Image src={logo} alt="Logo" width={180} height={80} />
+            </div>
+
+            {/* Right Links Section (60%) */}
+            <div className="w-full md:w-[60%] grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm font-medium">
+              {/* Info */}
+              <div className="flex flex-col gap-4">
+                <h4 className="font-semibold text-xl mb-1">Info</h4>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+              </div>
+
+              {/* Follow Us */}
+              <div className="flex flex-col gap-4">
+                <h4 className="font-semibold text-xl mb-1">Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+                <a href="#">Youtube</a>
+              </div>
+
+              {/* Conditions */}
+              <div className="flex flex-col gap-4">
+                <h4 className="font-semibold text-xl mb-1">Conditions</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Copyright */}
+          <div className="w-full border-t border-[#D8D1C3] pt-6 text-xs md:text-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <p>© 2023 — Copyright All Right Reserved.</p>
+            <p>Design by MarkaWorks</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };

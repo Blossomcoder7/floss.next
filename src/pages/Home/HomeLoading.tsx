@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, {
   ReactNode,
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
 } from "react";
@@ -141,9 +140,7 @@ const HomeLoading = ({ children }: { children: ReactNode }) => {
     }
   );
 
-useLayoutEffect(() => {
-  
-},[]);
+
 
   return (
     <>

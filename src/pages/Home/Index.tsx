@@ -5,6 +5,15 @@ import bg from "@/assets/images/background.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HomeLoading from "./HomeLoading";
+import Section2 from "./Section2";
+import Section3 from "./Section3";
+import Section4 from "./Section4";
+import Section5 from "./Section5";
+import Section6 from "./Section6";
+import Section7 from "./Section7";
+import Section8 from "./Section8";
+import Section9 from "./Section9";
+import Section10 from "./Section10";
 gsap.registerPlugin(ScrollTrigger);
 const Banner = () => {
   return (
@@ -41,9 +50,19 @@ const Index = () => {
   return (
     <>
       <HomeLoading>{<Banner />}</HomeLoading>
-      <div className="w-full h-screen bg-red-700 "></div>
-      <div className="w-full h-screen bg-red-500"></div>
-      <div className="w-full h-screen bg-red-300"></div>
+      <div className="w-full min-h-screen space-y-10 bg-white pt-20">
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <div className="flex flex-col w-full">
+          <Section5 />
+          <Section6 />
+          <Section7 />
+          <Section8 />
+          <Section9 />
+          <Section10 />
+        </div>
+      </div>
     </>
   );
 };
