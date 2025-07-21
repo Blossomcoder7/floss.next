@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React, {
   ReactNode,
@@ -11,7 +12,7 @@ import { useGSAP } from "@gsap/react";
 import useSmoothScroll from "@/hooks/useSmoothScroll";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGetLandingLoadedStatus } from "@/provider/LandingContextProvider";
+import useGetLandingLoadedStatus from "@/hooks/use";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeLoading = ({ children }: { children: ReactNode }) => {

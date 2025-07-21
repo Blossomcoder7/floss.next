@@ -12,9 +12,9 @@ import { IconButton } from "@mui/material";
 import { FaCartPlus, FaSearch, FaUser } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import AddPopperEl from "@/components/elements/AddPopperEl";
-import { useGetLandingLoadedStatus } from "@/provider/LandingContextProvider";
 import Scrollindicator from "@/components/UI/Scrollindicator";
 import footerbg from "@/assets/images/footerbg.png";
+import useGetLandingLoadedStatus from "@/hooks/use";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   useSmoothScroll({ autoInit: true });

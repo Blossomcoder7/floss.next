@@ -1,4 +1,5 @@
-import Index from "@/pages/Home/Index";
+
+import Index from "@/page-components/Home/Index";
 import React from "react";
 
 const Home = () => {

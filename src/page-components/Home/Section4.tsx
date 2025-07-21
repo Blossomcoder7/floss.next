@@ -1,4 +1,4 @@
-"use client"
+
 import MotionOverlay from "@/components/animated/MotionOverlay";
 import clsx from "clsx";
 import { motion } from "motion/react";
