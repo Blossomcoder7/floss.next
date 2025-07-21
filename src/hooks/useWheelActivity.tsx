@@ -43,6 +43,7 @@ export default function useWheelActivity(threshold = 200, skip = 1) {
     return () => {
       window.removeEventListener("wheel", onScroll);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isScrolling, threshold]);
 
   return isScrolling;
