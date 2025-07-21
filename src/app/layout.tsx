@@ -26,13 +26,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <LandingContextProvider>
+      <LandingContextProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
           <Layout>{children}</Layout>
-        </LandingContextProvider>
-      </body>
+        </body>
+      </LandingContextProvider>
     </html>
   );
 }
