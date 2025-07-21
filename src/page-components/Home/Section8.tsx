@@ -25,6 +25,8 @@ const Section8 = () => {
       image: image3,
     },
   ];
+
+  
   return (
     <div className="bg-[#EEF4E1] flex flex-col justify-center items-center w-full h-fit py-20">
       <div className="w-full h-fit flex justify-between items-center px-10 md:px-14">

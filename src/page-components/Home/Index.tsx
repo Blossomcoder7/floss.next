@@ -15,6 +15,7 @@ import Section7 from "./Section7";
 import Section8 from "./Section8";
 import Section9 from "./Section9";
 import Section10 from "./Section10";
+import RevealOnScroll from "@/components/animated/RevealOnScroll";
 gsap.registerPlugin(ScrollTrigger);
 const Banner = () => {
   return (
@@ -52,16 +53,32 @@ const Index = () => {
     <>
       <HomeLoading>{<Banner />}</HomeLoading>
       <div className="w-full min-h-screen space-y-10 bg-white pt-20">
-        <Section2 />
-        <Section3 />
+        <RevealOnScroll>
+          <Section2 />
+        </RevealOnScroll>
+        <RevealOnScroll>
+          <Section3 />
+        </RevealOnScroll>
         <Section4 />
         <div className="flex flex-col w-full">
-          <Section5 />
-          <Section6 />
-          <Section7 />
-          <Section8 />
-          <Section9 />
-          <Section10 />
+          <RevealOnScroll>
+            <Section5 />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Section6 />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Section7 />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Section8 />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Section9 />
+          </RevealOnScroll>
+          <RevealOnScroll>
+            <Section10 />
+          </RevealOnScroll>
         </div>
       </div>
     </>
